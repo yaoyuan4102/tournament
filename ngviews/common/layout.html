@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <div class="navbar-brand"><a href=""><img src="assets/images/logo.png"></a></div>
+            <div class="navbar-brand"><a ui-sref="home.default"><img src="assets/images/logo.png"></a></div>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -28,13 +28,13 @@
                 <li class="nav-divider"></li>
                 <li><a class="icon-menu" href=""><i class="fa fa-comments-o"></i></a></li>
                 <li><a class="icon-menu" href=""><i class="fa fa-bell-o"></i></a></li>
-                <li class="user-avatar"><img src="/uploads/1447978395bhiqt_thumb.jpg" ng-src="http://139.162.25.139/uploads/1447978395bhiqt_thumb.jpg"></li>
+                <li class="user-avatar"><img src="assets/images/imgs/user6.jpg"></li>
                 <li class="dropdown user-menu">
                     <a href="" role="button" class="login-top" data-toggle="dropdown">
                         poppub&nbsp;<b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a ui-sref="tournament.my_createlist" href="/tournament/my_createlist"><i class="fa fa-gamepad"></i>&nbsp;My Tournaments</a></li>
+                        <li><a ui-sref="home.detail.general"><i class="fa fa-gamepad"></i>&nbsp;My Tournaments</a></li>
                         <li><a ui-sref="home.user.profile"><i class="fa fa-user"></i>&nbsp;My Profile</a></li>
                         <li><a ui-sref="user.setting" href="/user/setting"><i class="fa fa-cog"></i>&nbsp;Settings</a></li>
                         <li><a ng-click="logout()"><i class="fa fa-sign-out"></i>&nbsp;Log out</a></li>
