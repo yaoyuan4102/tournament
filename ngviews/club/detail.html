@@ -1,0 +1,79 @@
+<div class="main container">
+
+    <div class="row main-content">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li class="active">Club Name</li>
+        </ol>
+        <div class="section clearfix">
+            <!-- left -->
+
+            <!-- right -->
+            <div class="col-sm-12 section-right">
+                <!-- detail meta -->
+                <div class="clearfix">
+                    <div class="col-sm-6">
+                        <div class="col-sm-4 header-pic"><img class="" src="assets/images/imgs/team_default.png">
+                            <!--<h4><a class="icon-menu" href=""><i class="fa fa-file-image-o"></i></a></h4>-->
+                        </div>
+                        <div class="col-sm-8" style="margin-top: -5px">
+                            <div class="col-sm-12 clearfix">
+                                <div class="pull-left">
+                                    <h1 class="user-meta-name">Yuan Yao</h1>
+                                </div>
+
+                                <div class="pull-right user-meta-share" style="margin:10px -40px 0 5px;">
+                                    <span class="user-meta-info">Share to</span>
+                                    <ul class="list-inline">
+                                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <p class="user-meta-intro">
+                                    Hahahahaha this is too good, 16 winning-streak!!!
+                                    Hahahahaha this is too good, 16 winning-streak!!!
+                                    Hahahahaha this is too good, 16 winning-streak!!!
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <!--<h1 class="tournament-title col-sm-12">Recent Activity</h1>-->
+
+                        <div class="detail-tournament col-sm-12">
+                            <div class="col-sm-12">
+                                <p></p>
+                                <p style="color: grey">We are organizing tournaments of the following games</p>
+                                <p>League of Legends; DOTA II; World of Tanks; Hearthstone; FIFA 2016; CS GO</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- tabs -->
+
+            </div>
+
+            <div class="col-sm-12" style="margin-top:30px; margin-left: 25px">
+                <div class="col-sm-12">
+                    <div class="row btn-manage-row">
+                        <div class="col-sm-2"><a class="btn btn-block btn-dark btn-manage" ui-sref-active="active" ui-sref="home.club.detail">General</a></div>
+                        <div class="col-sm-2"><a class="btn btn-block btn-dark btn-manage" ui-sref-active="active" ui-sref="home.club.members">Club Members</a></div>
+                        <div class="col-sm-2"><a class="btn btn-block btn-dark btn-manage" ui-sref-active="active" ui-sref="home.club.tournaments">Tournaments</a></div>
+                    </div>
+
+                </div>
+
+                <div ui-view class="sub-view"></div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

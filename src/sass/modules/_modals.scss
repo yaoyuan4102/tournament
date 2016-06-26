@@ -1,0 +1,46 @@
+/*modal*/
+.modal {
+
+}
+.modal-backdrop.am-fade {
+  opacity: .5;
+  transition: opacity .15s linear;
+  &.ng-enter {
+    opacity: 0;
+    &.ng-enter-active {
+      opacity: .5;
+    }
+  }
+  &.ng-leave {
+    opacity: .5;
+    &.ng-leave-active {
+      opacity: 0;
+    }
+  }
+}
+//.modal-content {
+//  -moz-border-radius: 5px;
+//  -webkit-border-radius: 5px;
+//  border-radius: 5px;
+//  -moz-box-shadow: none;
+//  -webkit-box-shadow: none;
+//  box-shadow: none;
+//  border-width: 5px;
+//}
+//.modal-header {
+//  padding: 10px 10px 10px 15px;
+//  line-height: 30px;
+//  -moz-border-radius: 5px 5px 0px 0px;
+//  -webkit-border-radius: 5px 5px 0px 0px;
+//  border-radius: 5px 5px 0px 0px;
+//  background: #F5F5F5;
+//  border-color: #d5d5d5;
+//}
+//.modal-footer {
+//  background: #F5F5F5;
+//  border-color: #D5D5D5;
+//  padding: 10px 15px;
+//  -moz-border-radius: 0px 0px 5px 5px;
+//  -webkit-border-radius: 0px 0px 5px 5px;
+//  border-radius: 0px 0px 5px 5px;
+//}

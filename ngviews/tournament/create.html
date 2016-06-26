@@ -1,0 +1,107 @@
+<div class="main container">
+    <div class="row btn-manage-row">
+        <div class="col-sm-2"><a class="btn btn-block btn-dark btn-manage" ui-sref-active="active" ui-sref="home.create"><i class="fa fa-plus-square"></i>&nbsp;Create A New Tournament</a></div>
+        <div class="col-sm-2"><a class="btn btn-block btn-dark btn-manage" ui-sref-active="active" ui-sref="home.default"><i class="fa fa-list"></i>&nbsp;Manage My Tournament</a></div>
+        <div class="col-sm-2"><a class="btn btn-block btn-dark btn-manage" href=""><i class="fa fa-bullhorn"></i>&nbsp;Promote My Tournament</a></div>
+        <div class="col-sm-2"><a class="btn btn-block btn-dark btn-manage" href=""><i class="fa fa-line-chart"></i>&nbsp;Analyse My Tournament</a></div>
+        <div class="col-sm-2"><a class="btn btn-block btn-dark btn-manage" href=""><i class="fa fa-trophy"></i>&nbsp;Join Other Tournament</a></div>
+    </div>
+    <div class="row main-content">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li class="active">Create A New Tournament</li>
+        </ol>
+        <div class="section clearfix">
+            <div class="col-sm-3 section-left">
+                <ul class="filter-pill nav nav-pills">
+                    <li class="active"><a href="">General</a></li>
+                    <li><a href="">Live Setting</a></li>
+                </ul>
+                <div class="form-box bg-grey clearfix" style="margin-top: 15px">
+                    <div class="mg-input-container">
+                        <label>Tournament Header pic</label>
+                        <img class="img-thumbnail" src="assets/images/imgs/dota2.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9 section-right">
+                <div class="form-box bg-grey clearfix">
+                    <form>
+                        <div class="mg-input-container col-sm-10">
+                            <label>Tournament Name</label>
+                            <input type="text" class="form-control" placeholder="enter your tournament name here">
+                        </div>
+                        <div class="mg-input-container col-sm-5">
+                            <label>Tournament Administrators</label>
+                            <input type="text" class="form-control" placeholder="administrators must be gamrule.com users">
+                        </div>
+                        <div class="mg-input-container col-sm-5">
+                            <label>Game Category</label>
+                            <input type="text" class="form-control" placeholder="administrators must be gamrule.com users">
+                        </div>
+                        <div class="mg-input-container col-sm-5">
+                            <label>Start Date</label>
+                            <input type="text" class="form-control" autocomplete="off" ng-model="start_date" placeholder="yyyy-MM-dd"
+                                   data-date-format="yyyy-MM-dd"
+                                   data-date-type="string"
+                                   data-autoclose="1"
+                                   data-min-date="{{ today }}"
+                                   name="startdate"
+                                   iconLeft="fa fa-angle-double-left"
+                                   iconRight="fa fa-angle-double-right"
+                                   bs-datepicker required>
+                            <span class="add-on"><i class="fa fa-calendar"></i></span>
+                        </div>
+                        <div class="mg-input-container col-sm-5">
+                            <label>Start Time</label>
+                            <input type="text" class="form-control" autocomplete="off" ng-model="start_time" placeholder=""
+                                   name="starttime"
+                                   data-time-format="HH:mm"
+                                   data-time-type="string"
+                                   data-autoclose="0"
+                                   bs-timepicker required>
+                            <span class="add-on"><i class="fa fa-clock-o"></i></span>
+                        </div>
+                        <div class="mg-input-container col-sm-5">
+                            <label>Check-in Date</label>
+                            <input type="text" class="form-control" autocomplete="off" ng-model="start_date" placeholder="yyyy-MM-dd"
+                                   data-date-format="yyyy-MM-dd"
+                                   data-date-type="string"
+                                   data-autoclose="1"
+                                   data-min-date="{{ today }}"
+                                   name="startdate"
+                                   iconLeft="fa fa-angle-double-left"
+                                   iconRight="fa fa-angle-double-right"
+                                   bs-datepicker required>
+                            <span class="add-on"><i class="fa fa-calendar"></i></span>
+                        </div>
+                        <div class="mg-input-container col-sm-5">
+                            <label>Check-in Time</label>
+                            <input type="text" class="form-control" autocomplete="off" ng-model="start_time" placeholder="yyyy-MM-dd"
+                                   name="starttime"
+                                   data-time-format="HH:mm"
+                                   data-time-type="string"
+                                   data-autoclose="1"
+                                   bs-timepicker required>
+                            <span class="add-on"><i class="fa fa-clock-o"></i></span>
+                        </div>
+                        <div class="mg-input-container col-sm-10">
+                            <label>Tournament Introduction & Rules</label>
+                            <textarea class="form-control"></textarea>
+                        </div>
+                        <div class="mg-input-container col-sm-10">
+                            <label>Tournament Prizing</label>
+                            <textarea class="form-control"></textarea>
+                        </div>
+                        <div class="mg-input-container col-sm-10 text-right">
+                            <button class="btn btn-primary">cancel</button>
+                            <button class="btn btn-danger">Save Draft</button>
+                            <button class="btn btn-danger">Save & Publish</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

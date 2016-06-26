@@ -1,0 +1,92 @@
+<div class="main container">
+    <div class="row btn-manage-row">
+        <div class="col-sm-2"><a class="btn btn-block btn-dark btn-manage" ui-sref-active="active" ui-sref="home.create"><i class="fa fa-plus-square"></i>&nbsp;Create A New Tournament</a></div>
+        <div class="col-sm-2"><a class="btn btn-block btn-dark btn-manage" ui-sref-active="active" ui-sref="home.default"><i class="fa fa-list"></i>&nbsp;Manage My Tournament</a></div>
+        <div class="col-sm-2"><a class="btn btn-block btn-dark btn-manage" href=""><i class="fa fa-bullhorn"></i>&nbsp;Promote My Tournament</a></div>
+        <div class="col-sm-2"><a class="btn btn-block btn-dark btn-manage" href=""><i class="fa fa-line-chart"></i>&nbsp;Analyse My Tournament</a></div>
+        <div class="col-sm-2"><a class="btn btn-block btn-dark btn-manage" href=""><i class="fa fa-trophy"></i>&nbsp;Join Other Tournament</a></div>
+    </div>
+    <div class="row main-content">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li class="active">Create A New Tournament</li>
+        </ol>
+        <div class="section clearfix">
+            <!-- left -->
+            <div class="col-sm-3 section-left">
+                <div class="bg-grey clearfix tournament-status">
+                    <h4 class="">Registration Open</h4>
+                    <div><span>16</span>Teams Registered</div>
+                </div>
+                <div class="tournament-join">
+                    <ul class="filter-pill nav nav-pills">
+                        <li class="active">
+                            <a class="first open" href="" bs-tooltip title="join the game"><span class="tab-rounded"><i class="fa fa-link"></i></span></a>
+                        </li>
+                        <li>
+                            <a class="last disabled" href=""><span class="tab-rounded"><i class="fa fa-calendar-check-o"></i></span></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <p class="tournament-join-desc">The Tournament has already started.</p>
+                        <p><a class="btn btn-block btn-danger" href="">Join</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- right -->
+            <div class="col-sm-9 section-right">
+                <!-- detail meta -->
+                <div class="detail-tournament clearfix">
+                    <div class="col-sm-4 header-pic"><img class="" src="assets/images/imgs/dota2.png"></div>
+                    <div class="col-sm-8 detail-tournament-right">
+                        <h1 class="tournament-title col-sm-12">Frag Scene's 5v5 SnD Feedback Tournament PC</h1>
+
+                        <div class="tournament-meta clearfix">
+                            <div class="pull-left">
+                                <a class="tournament-meta-avatar" href="javascript:void(0)"><img src="assets/images/imgs/user6.jpg"></a>
+                                <a class="tournament-meta-creator" href="javascript:void(0)">Chenz</a>
+                            </div>
+                            <div class="pull-right tournament-meta-share">
+                                <span class="">Share this tournament:</span>
+                                <ul class="list-inline">
+                                    <li><a href=""><i class="fa fa-link"></i></a></li>
+                                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tournament-intro">A tournament for the Barracks Master custom game on Dota 2! Open to players from all over the world!Open to players from all over the world!
+                        </div>
+                        <div class="tournament-attributes">
+                            <div class="tournament-attribute">
+                                <h4>League of Legends</h4>
+                                <p>Game Format: 5v5</p>
+                                <p>Game Mode: best of 1; finals: best of 3</p>
+                            </div>
+                            <div class="tournament-attribute">
+                                <h4>8:00 AM PST Saturday, January 9th 2016</h4>
+                                <p>Check-in time: 07:45 am </p>
+                                <p>Region: United States of American</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- tabs -->
+                <div class="detail-tabs">
+                    <ul class="filter-pill nav nav-pills">
+                        <li><a ui-sref="home.detail.general" ui-sref-active="active">General</a></li>
+                        <li><a ui-sref="home.detail.comments" ui-sref-active="active">Comments</a></li>
+                        <li><a ui-sref="home.detail.participants" ui-sref-active="active">Participants</a></li>
+                        <li><a href="">Brackets</a></li>
+                        <li><a href="">Live Stream</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div ui-view></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

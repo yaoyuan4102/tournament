@@ -1,0 +1,424 @@
+<div class="dropdown-menu datepicker ng-scope am-fade bottom-left datepicker-mode-0"
+     ng-class="'datepicker-mode-' + $mode"
+     style="max-width: 320px; top: 56px; left: 15px; display: block; visibility: visible;">
+    <table style="table-layout: fixed; height: 100%; width: 100%">
+        <thead>
+        <tr class="text-center">
+            <th>
+                <button tabindex="-1" type="button" class="btn btn-default pull-left" ng-click="$selectPane(-1)"><i
+                        class="glyphicon glyphicon-chevron-left"></i></button>
+            </th>
+            <th colspan="5">
+                <button tabindex="-1" type="button" class="btn btn-default btn-block text-strong"
+                        ng-click="$toggleMode()"><strong style="text-transform: capitalize" ng-bind="title"
+                                                         class="ng-binding">December 2015</strong></button>
+            </th>
+            <th>
+                <button tabindex="-1" type="button" class="btn btn-default pull-right" ng-click="$selectPane(+1)"><i
+                        class="glyphicon glyphicon-chevron-right"></i></button>
+            </th>
+        </tr>
+        <!-- ngIf: showLabels -->
+        <tr ng-if="showLabels" ng-bind-html="labels" class="ng-binding ng-scope">
+            <th class="dow text-center">Sun</th>
+            <th class="dow text-center">Mon</th>
+            <th class="dow text-center">Tue</th>
+            <th class="dow text-center">Wed</th>
+            <th class="dow text-center">Thu</th>
+            <th class="dow text-center">Fri</th>
+            <th class="dow text-center">Sat</th>
+        </tr>
+        <!-- end ngIf: showLabels --></thead>
+        <tbody><!-- ngRepeat: (i, row) in rows -->
+        <tr ng-repeat="(i, row) in rows" height="16.666666666666668%" class="ng-scope"><!-- ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding text-muted">29</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding text-muted">30</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">01</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">02</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">03</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">04</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">05</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row --></tr>
+        <!-- end ngRepeat: (i, row) in rows -->
+        <tr ng-repeat="(i, row) in rows" height="16.666666666666668%" class="ng-scope"><!-- ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">06</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">07</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">08</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">09</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">10</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">11</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">12</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row --></tr>
+        <!-- end ngRepeat: (i, row) in rows -->
+        <tr ng-repeat="(i, row) in rows" height="16.666666666666668%" class="ng-scope"><!-- ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">13</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">14</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">15</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">16</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">17</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">18</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">19</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row --></tr>
+        <!-- end ngRepeat: (i, row) in rows -->
+        <tr ng-repeat="(i, row) in rows" height="16.666666666666668%" class="ng-scope"><!-- ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">20</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">21</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">22</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">23</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default btn-info btn-today" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">24</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">25</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">26</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row --></tr>
+        <!-- end ngRepeat: (i, row) in rows -->
+        <tr ng-repeat="(i, row) in rows" height="16.666666666666668%" class="ng-scope"><!-- ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">27</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">28</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">29</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">30</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding">31</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding text-muted">01</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding text-muted">02</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row --></tr>
+        <!-- end ngRepeat: (i, row) in rows -->
+        <tr ng-repeat="(i, row) in rows" height="16.666666666666668%" class="ng-scope"><!-- ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding text-muted">03</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding text-muted">04</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding text-muted">05</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding text-muted">06</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding text-muted">07</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding text-muted">08</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row -->
+            <td class="text-center ng-scope" ng-repeat="(j, el) in row">
+                <button tabindex="-1" type="button" class="btn btn-default" style="width: 100%"
+                        ng-class="{'btn-primary': el.selected, 'btn-info btn-today': el.isToday &amp;&amp; !el.selected}"
+                        ng-click="$select(el.date)" ng-disabled="el.disabled"><span ng-class="{'text-muted': el.muted}"
+                                                                                    ng-bind="el.label"
+                                                                                    class="ng-binding text-muted">09</span>
+                </button>
+            </td>
+            <!-- end ngRepeat: (j, el) in row --></tr>
+        <!-- end ngRepeat: (i, row) in rows --></tbody>
+    </table>
+</div>
